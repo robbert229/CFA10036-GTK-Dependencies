@@ -1,0 +1,27 @@
+CC=arm-none-linux-gnueabi-gcc
+LD=arm-none-linux-gnueabi-gcc
+
+GTKDEPDIR=P:\CFA10036-GTK-Dependencies
+FLAGS=-std=c99 -Wall
+INC=-I$(GTKDEPDIR)\includes	
+LIB=-L$(GTKDEPDIR)\libs \
+	-lgtk-x11-2.0 \
+	-lgdk-x11-2.0 \
+	-latk-1.0 \
+	-lgio-2.0 \
+	-lpangoft2-1.0  \
+	-lpangocairo-1.0 \
+	-lgdk_pixbuf-2.0 \
+	-lcairo \
+	-lpango-1.0 \
+	-lfreetype \
+	-lfontconfig \
+	-lgobject-2.0 \
+	-lglib-2.0 \
+	-Wl,-rpath=$(GTKDEPDIR)\libs
+
+hello-gtk:hello-gtk.o
+	$(LD) hello-gtk.o -o hello-gtk $(LIB)
+
+hello-gtk.o:hello-gtk.c
+	$(CC) hello-gtk.c -c -o hello-gtk.o $(FLAGS) $(INC)
