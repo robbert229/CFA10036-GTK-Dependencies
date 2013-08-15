@@ -7,4 +7,4 @@ All known gtk+ dependencies have been aggregated together into this repo as a qu
 
 If there are any files that this repo is lacking in, I would appreciate you reporting it as a bug, and possibly submiting a pull request with the needed file. This goes true for unnecessary files as well.
 
-Friendly and constructive criticism is Welcomed and appreciated.
+Friendly and constructive criticism is welcomed and appreciated.
